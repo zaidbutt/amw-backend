@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  parent_id: MyString
+  timestamp: 2025-10-22 02:04:32
+  image_url: MyString
+  video_url: MyString
+  media_size_megabytes: 1.5
+  is_video: false
+  moment: one
+
+two:
+  parent_id: MyString
+  timestamp: 2025-10-22 02:04:32
+  image_url: MyString
+  video_url: MyString
+  media_size_megabytes: 1.5
+  is_video: false
+  moment: two

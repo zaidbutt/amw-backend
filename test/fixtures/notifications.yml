@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  timestamp: 2025-10-22 02:04:33
+  message: MyString
+  title: MyString
+  story_id: MyString
+  story_name: MyString
+  invite_code: MyString
+  story_image_url: MyString
+  is_read: false
+  is_story_joined: false
+  redirect_url: MyString
+  moment_id: MyString
+  from_user: one
+  to_user: one
+
+two:
+  timestamp: 2025-10-22 02:04:33
+  message: MyString
+  title: MyString
+  story_id: MyString
+  story_name: MyString
+  invite_code: MyString
+  story_image_url: MyString
+  is_read: false
+  is_story_joined: false
+  redirect_url: MyString
+  moment_id: MyString
+  from_user: two
+  to_user: two

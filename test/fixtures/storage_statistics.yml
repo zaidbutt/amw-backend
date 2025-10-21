@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  timestamp: 2025-10-22 02:04:35
+  file_size: MyString
+  s3_key: MyString
+  user: one
+
+two:
+  timestamp: 2025-10-22 02:04:35
+  file_size: MyString
+  s3_key: MyString
+  user: two
