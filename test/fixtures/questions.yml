@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  chapter: one
+  story: one
+  title: MyString
+  timestamp: 2025-10-22 02:04:32
+  to_user_id: MyString
+  answer_id: MyString
+
+two:
+  user: two
+  chapter: two
+  story: two
+  title: MyString
+  timestamp: 2025-10-22 02:04:32
+  to_user_id: MyString
+  answer_id: MyString
