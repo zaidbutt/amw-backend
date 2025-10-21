@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_21_142459) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_21_144752) do
+  create_table "chapters", force: :cascade do |t|
+    t.string "title"
+    t.integer "order"
+    t.integer "story_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "moments", force: :cascade do |t|
+    t.string "title"
+    t.integer "order"
+    t.integer "chapter_id", null: false
+    t.integer "story_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chapter_id"], name: "index_moments_on_chapter_id"
+  end
+
   create_table "stories", force: :cascade do |t|
     t.string "title"
     t.string "invite_code"
@@ -37,6 +55,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_21_142459) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "moments", "chapters"
   add_foreign_key "story_users_links", "stories"
   add_foreign_key "story_users_links", "users"
 end
