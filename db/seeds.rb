@@ -7,3 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+user = User.create!(name: "Jon", last_name: "Gilbertson")
+story = Story.create!(title: "My Story", invite_code: "ABC123", user: user)
+chapter = Chapter.create!(title: "Intro", story: story)
+moment = Moment.create!(title: "First Moment", chapter: chapter, user: user)

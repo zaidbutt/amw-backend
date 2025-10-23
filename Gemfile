@@ -47,3 +47,8 @@ group :development, :test do
 end
 
 gem "graphql", "~> 2.5"
+gem "graphiql-rails", group: :development
+# Gemfile
+gem "vite_rails"
+
+

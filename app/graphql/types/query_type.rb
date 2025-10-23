@@ -18,6 +18,17 @@ module Types
       ids.map { |id| context.schema.object_from_id(id, context) }
     end
 
+    field :stories, [Types::StoryType], null: false
+    def stories
+      Story.all
+    end
+
+    field :moments, [Types::MomentType], null: false
+    def moments
+      Moment.all
+    end
+
+
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 

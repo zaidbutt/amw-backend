@@ -1,4 +1,5 @@
-# app/graphql/types/user_type.rb
+# frozen_string_literal: true
+
 module Types
   class UserType < Types::BaseObject
     field :id, ID, null: false
@@ -6,7 +7,7 @@ module Types
     field :last_name, String
     field :bio, String
     field :image_url, String
-    field :stories, [Types::StoryType], null: true
-    field :emergency, Types::EmergencyType, null: true
+    field :created_at, GraphQL::Types::ISO8601DateTime, null: false
+    field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
   end
 end
