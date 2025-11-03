@@ -49,6 +49,19 @@ end
 gem "graphql", "~> 2.5"
 gem "graphiql-rails", group: :development
 # Gemfile
-gem "vite_rails"
+# gem "vite_rails"
+# gem "vite_ruby"
 
+
+gem "turbo-rails"
+gem "stimulus-rails"
+gem "importmap-rails"
+
+gem "sassc-rails"   # if you plan to use SCSS with Tailwind
+gem "tailwindcss-rails"
+gem 'aws-sdk-cognitoidentity'
+gem 'aws-sdk-cognitoidentityprovider'
+gem 'figaro'
+gem "dotenv-rails"
+gem 'devise'
 
