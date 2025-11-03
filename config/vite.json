@@ -1,0 +1,6 @@
+{
+  "all": {
+    "source_code_dir": "app/frontend",
+    "watch_additional_paths": []
+  }
+}

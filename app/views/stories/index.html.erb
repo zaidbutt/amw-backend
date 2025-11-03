@@ -1,0 +1,11 @@
+<h1 class="text-2xl font-semibold mb-4">Stories</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <% @stories.each do |story| %>
+    <div class="bg-white shadow-card rounded-2xl p-5">
+      <h2 class="text-xl font-display text-amw-ink mb-2"><%= story[:title] %></h2>
+      <p class="text-sm text-gray-500 mb-1">By <%= story[:author] %></p>
+      <p class="text-sm text-gray-500"><%= story[:chapters] %> Chapters</p>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .amw-btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-xl font-medium text-white bg-amw-ink hover:bg-amw-lilac transition;
+  }
+  .amw-card {
+    @apply bg-white rounded-2xl shadow-card p-5;
+  }
+  .amw-chip {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-sm bg-amw-mist text-amw-ink;
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AMW</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+
+<body class="min-h-screen bg-amw-mist text-amw-ink/90">
+  <% if user_signed_in? %>
+    <%= render "shared/topbar" %>
+    <div class="flex">
+      <%= render "shared/sidebar" %>
+      <main class="ml-64 w-[calc(100%-16rem)] p-6">
+        <%= yield %>
+      </main>
+    </div>
+  <% else %>
+    <main class="p-6">
+      <%= yield %>
+    </main>
+  <% end %>
+</body>
