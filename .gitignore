@@ -4,6 +4,9 @@
 # belong in git's global ignore instead:
 # `$XDG_CONFIG_HOME/git/ignore` or `~/.config/git/ignore`
 
+/public/assets
+/public/packs
+/public/builds
 # Ignore bundler config.
 /.bundle
 
@@ -30,3 +33,18 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Vite Ruby
+/public/vite*
+node_modules
+# Vite uses dotenv and suggests to ignore local-only env files. See
+# https://vitejs.dev/guide/env-and-mode.html#env-files
+*.local
+
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
+/public/assets/
+/Gemfile.lock
+/package-lock.json
+/package.json

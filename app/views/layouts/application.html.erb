@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AMW</title>
+    <title>AMW Dashboard</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
+  <body class="min-h-screen bg-gray-100 text-gray-800">
+    <% if user_signed_in? %>
+      <header class="bg-purple-900 text-white shadow px-6 py-3 flex justify-between items-center">
+        <h1 class="text-xl font-semibold">Dashboard</h1>
+        <div>
+          <%= button_to "Logout", destroy_user_session_path, method: :delete,
+            class: "bg-purple-600 hover:bg-purple-700 px-4 py-1 rounded-md text-white" %>
+        </div>
+      </header>
 
-<body class="min-h-screen bg-amw-mist text-amw-ink/90">
-  <% if user_signed_in? %>
-    <%= render "shared/topbar" %>
-    <div class="flex">
-      <%= render "shared/sidebar" %>
-      <main class="ml-64 w-[calc(100%-16rem)] p-6">
-        <%= yield %>
-      </main>
-    </div>
-  <% else %>
-    <main class="p-6">
-      <%= yield %>
-    </main>
-  <% end %>
-</body>
+      <div class="flex">
+        <aside class="w-64 bg-purple-200 min-h-screen p-6 space-y-4">
+          <%= link_to "Dashboard", root_path, class: "block px-3 py-2 rounded-md hover:bg-purple-300" %>
+          <%= link_to "Stories", stories_path, class: "block px-3 py-2 rounded-md hover:bg-purple-300" %>
+        </aside>
+
+        <main class="ml-20 p-6 w-full">
+          <%= yield %>
+        </main>
+      </div>
+    <% else %>
+      <main class="p-6"><%= yield %></main>
+    <% end %>
+  </body>
+</html>

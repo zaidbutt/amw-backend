@@ -5,7 +5,7 @@
     <%= form_for(resource, as: resource_name, url: password_path(resource_name)) do |f| %>
       <div class="mb-4">
         <%= f.label :email, class: "block text-gray-700 font-medium mb-1" %>
-        <%= f.email_field :email, autofocus: true, class: "w-full border-gray-300 rounded-lg px-3 py-2 focus:ring-blue-500 focus:border-blue-500" %>
+        <%= f.email_field :email, autofocus: true, class: "w-full border-gray-300 rounded-lg px-3 py-2 focus:ring-purple-500 focus:border-blue-500" %>
       </div>
 
       <%= f.submit "Send reset instructions", class: "w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition" %>

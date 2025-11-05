@@ -1,4 +1,12 @@
-<div>
-  <h1 class="font-bold text-4xl">Stories#show</h1>
-  <p>Find me in app/views/stories/show.html.erb</p>
-</div>
+<h1 class="text-2xl font-semibold mb-4"><%= @story.title %></h1>
+
+<% if @story.image.attached? %>
+  <%= image_tag @story.image, size: 400,
+        class: "rounded-lg shadow mb-4" %>
+<% end %>
+
+<p class="text-gray-700">Invite Code: <%= @story.inviteCode %></p>
+
+<p class="text-gray-600 mt-3">Locked: <%= @story.locked ? "Yes" : "No" %></p>
+
+<%= link_to "Back to Stories", stories_path, class: "text-purple-600 hover:underline mt-5 inline-block" %>

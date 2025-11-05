@@ -2,26 +2,21 @@ module.exports = {
   content: [
     "./app/views/**/*.{erb,html,html.erb}",
     "./app/helpers/**/*.rb",
-    "./app/assets/stylesheets/**/*.{css,scss}"
+    "./app/assets/stylesheets/**/*.css",
+    "./app/javascript/**/*.js",
+    "./app/javascript/**/*.ts",
+    "./app/javascript/**/*.tsx"
   ],
   theme: {
     extend: {
       colors: {
-        amw: {
-          ink:  "#280A32",
-          sky:  "#047BC1",
-          lilac:"#CE7CDE",
-          mist: "#E7E7E7",
-          ash:  "#8CA1A3",
-          mid:  "#B5B5B5",
-        },
+        'amw-ink': '#2D004D',       // deep purple
+        'amw-lilac': '#DCC7E1',     // light lilac
+        'amw-mist': '#F5F3F7',      // soft background
       },
-      borderRadius: { 'xl': '1rem', '2xl': '1.25rem' },
-      boxShadow:   { card: "0 10px 20px rgba(40,10,50,0.08)" },
-      fontFamily: {
-        display: ['"Poppins"', 'ui-sans-serif', 'system-ui'],
-        body:    ['"Oxygen"',  'ui-sans-serif', 'system-ui'],
-      }
+      boxShadow: {
+        'card': '0 2px 6px rgba(0, 0, 0, 0.05)',
+      },
     },
   },
   plugins: [],

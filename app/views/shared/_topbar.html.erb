@@ -1,13 +1,8 @@
-<header class="bg-white shadow px-6 py-4 flex items-center justify-between">
-  <h1 class="text-xl font-semibold text-amw-ink font-display">Dashboard</h1>
+<header class="bg-purple text-white shadow-md px-6 py-3 flex items-center justify-between">
+  <h1 class="text-xl font-semibold tracking-wide">Dashboard</h1>
   <div class="flex items-center space-x-4">
-    <span class="text-amw-ink/80">
-      Welcome, <strong><%= current_user.email %></strong>
-    </span>
-    <%= link_to "Logout",
-                destroy_user_session_path,
-                method: :delete,
-                data: { turbo: false },
-                class: "bg-amw-ink text-white px-3 py-1 rounded-md hover:bg-amw-lilac" %>
+    <span class="text-gray-200">Welcome, <strong><%= current_user.email %></strong></span>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete,
+      class: "bg-amw-lilac text-amw-ink px-4 py-1 rounded-lg font-medium hover:bg-amw-ink hover:text-white transition" %>
   </div>
 </header>

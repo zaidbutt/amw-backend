@@ -1,0 +1,22 @@
+<%= form_with(model: @story, local: true, class: "max-w-lg bg-white shadow rounded-lg p-6 space-y-5") do |f| %>
+  <div>
+    <%= f.label :title, "Story Title", class: "block text-gray-700 font-medium mb-1" %>
+    <%= f.text_field :title, class: "w-full border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500 px-3 py-2" %>
+  </div>
+
+  <div>
+    <%= f.label :image, "Upload Story Image", class: "block text-gray-700 font-medium mb-1" %>
+    <%= f.file_field :image, class: "w-full border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500 px-3 py-2" %>
+  </div>
+
+  <div>
+    <%= f.label :chapter_ids, "Select Chapters", class: "block text-gray-700 font-medium mb-1" %>
+    <%= f.collection_select :chapter_ids, @chapters, :id, :title,
+      {}, { multiple: true, class: "w-full border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500 px-3 py-2" } %>
+    <p class="text-sm text-gray-500 mt-1">Hold ⌘ (Mac) or Ctrl (Windows) to select multiple chapters.</p>
+  </div>
+
+  <div class="flex justify-end">
+    <%= f.submit "Create Story", class: "bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-md font-medium transition" %>
+  </div>
+<% end %>

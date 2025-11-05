@@ -7,7 +7,21 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-user = User.create!(name: "Jon", last_name: "Gilbertson")
-story = Story.create!(title: "My Story", invite_code: "ABC123", user: user)
-chapter = Chapter.create!(title: "Intro", story: story)
-moment = Moment.create!(title: "First Moment", chapter: chapter, user: user)
+
+puts "🌱 Seeding dummy chapters..."
+
+# Chapter.destroy_all
+
+chapters = [
+  { title: "Family Memories", order: 1, story_id: 1 },
+  { title: "Travel Adventures", order: 2, story_id: 2 },
+  { title: "Childhood Moments", order: 3, story_id: 2 },
+  { title: "Career Highlights", order: 4, story_id: 2 },
+  { title: "Special Occasions", order: 5, story_id: 2 }
+]
+
+chapters.each do |chapter|
+  Chapter.create!(chapter)
+end
+
+puts "✅ Seeded #{Chapter.count} chapters!"

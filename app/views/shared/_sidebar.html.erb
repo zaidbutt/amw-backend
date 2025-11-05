@@ -1,16 +1,9 @@
-<aside class="fixed left-0 top-0 h-screen w-64 bg-amw-ink text-white flex flex-col">
-  <div class="px-6 py-5 border-b border-white/10">
-    <div class="font-display text-lg">a moment with</div>
-    <div class="text-xs text-white/70">Storytelling made easy</div>
-  </div>
-
-  <nav class="flex-1 px-3 py-4 space-y-1">
-    <%= link_to "Dashboard", dashboard_path, class: "block px-3 py-2 rounded-lg hover:bg-white/10" %>
-    <%= link_to "Stories", stories_path, class: "block px-3 py-2 rounded-lg hover:bg-white/10" %>
-    
+<aside class="bg-amw-lilac text-amw-ink w-64 min-h-screen p-6 space-y-4 shadow-lg">
+  <nav class="flex flex-col space-y-3">
+    <%= link_to "Dashboard", root_path,
+      class: "block px-3 py-2 rounded-md font-medium hover:bg-amw-ink hover:text-white transition" %>
+    <%= link_to "Stories", stories_path,
+      class: "block px-3 py-2 rounded-md font-medium hover:bg-amw-ink hover:text-white transition" %>
+   
   </nav>
-
-  <div class="px-4 py-3 text-xs text-white/60 border-t border-white/10">
-    © <%= Time.current.year %> AMW
-  </div>
 </aside>

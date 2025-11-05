@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   # post "/graphql", to: "graphql#execute"
   root "dashboard#index"
   get "/dashboard", to: "dashboard#index"
-  resources :stories, only: [:index, :show]
+  resources :stories, only: [:index, :new, :create, :show]
+
+
 
 
 end
