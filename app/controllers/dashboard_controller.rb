@@ -16,6 +16,7 @@ class DashboardController < ApplicationController
       { text: "Export completed for “First Year”.",         time: "2h"  },
     ]
 
-    @stories = Story.all
+    @stories = Story.where(user_id: current_user.id)
+
   end
 end

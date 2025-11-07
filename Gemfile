@@ -65,3 +65,4 @@ gem 'figaro'
 gem "dotenv-rails"
 gem 'devise'
 
+gem "byebug"
